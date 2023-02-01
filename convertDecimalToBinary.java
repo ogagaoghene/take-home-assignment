@@ -15,7 +15,7 @@ public class convertDecimalToBinary {
   }
 
   public static void printBinary2(int number) {
-		if (number <= 0)
+		if (number < 0)
 			return;
 
 		Queue<Integer> queue = new LinkedList<>();
