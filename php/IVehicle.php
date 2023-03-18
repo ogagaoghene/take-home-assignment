@@ -21,6 +21,7 @@ abstract class AbstractVehicle implements IVehicle
 
   public function __construct($manufacturer, $model)
   {
+    echo "Calling Abstract class constructor for $manufacturer. \n";
     $this->manufacturer = $manufacturer;
     $this->model = $model;
   }
@@ -52,7 +53,7 @@ abstract class AbstractVehicle implements IVehicle
 
   public function stop(): void 
   {
-    echo $this->manufacturer . $this->model. "is" . "<driving/stopping>";
+    echo "<$this->manufacturer > " . "<$this->model>". " is " . "<driving/stopping>";
   }
 }
 
@@ -75,5 +76,6 @@ class Car extends AbstractVehicle implements IDataModel
   }
 }
 
-$car = new Car("Green", "BMW", "2003");
-$car.getData();
+$car = new Car('Green', 'BMW', '2003');
+print_r($car->getData());
+print_r($car->drive());
