@@ -48,12 +48,13 @@ abstract class AbstractVehicle implements IVehicle
 
   public function drive(): void 
   { 
-    echo $this->manufacturer . $this->model. "is" . "<driving/stopping>";
+    echo "<$this->manufacturer>" . "<$this->model>". " is " . "<driving/stopping>";
+    print("\n");
   }
 
   public function stop(): void 
   {
-    echo "<$this->manufacturer > " . "<$this->model>". " is " . "<driving/stopping>";
+    echo "<$this->manufacturer>" . "<$this->model>". " is " . "<driving/stopping>";
   }
 }
 
@@ -62,12 +63,12 @@ class Car extends AbstractVehicle implements IDataModel
   public $color;
   private $data = [];
 
-  public function __construct($color, $manufacturer, $model)
+  public function __construct($manufacturer, $model, $color)
   {
     parent::__construct($manufacturer, $model);
-    $this->data[$color] = $color;
     $this->data[$manufacturer] = $manufacturer;
     $this->data[$model] = $model;
+    $this->data[$color] = $color;
   }
 
   public function getData(): array
@@ -76,6 +77,7 @@ class Car extends AbstractVehicle implements IDataModel
   }
 }
 
-$car = new Car('Green', 'BMW', '2003');
-print_r($car->getData());
+$car = new Car('Honda', '2003', 'Silver', );
 print_r($car->drive());
+print_r($car->stop());
+print_r($car->getData());
