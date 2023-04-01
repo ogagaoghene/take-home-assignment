@@ -2,6 +2,7 @@ def main():
     test_list = [1, 2, 32, 8, 17, 19, 42, 13, 0]
     print(sequential_search(test_list, 3))
     print(sequential_search(test_list, 13))
+    print(seq_search(test_list, 12))
 
 def sequential_search(a_list, item):
     pos = 0
@@ -12,6 +13,12 @@ def sequential_search(a_list, item):
         else:
             pos = pos+1
     return found
+
+def seq_search(arr, item):
+    for i in range(1, len(arr)):
+        if arr[i] == item:
+            return True
+    return False
 
 if __name__ == '__main__':
     main()
