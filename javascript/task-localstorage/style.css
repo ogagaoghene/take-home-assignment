@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+html, body {
+    font-family: "Roboto Mono";
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.container > div > h1 {
+    text-align: center;
+}
+
+.book-name {
+    margin-left: 25px !important;
+}
+
+.form-frame {
+    border: 1px solid grey;
+    padding: 30px;
+    border-radius: 3px;
+}
+
+input[type=text] {
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 5px;
+    width: 300px;
+    height: 35px;
+}
+
+input[type=submit] {
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 5px;
+    width: 380px;
+    height: 35px;
+}
