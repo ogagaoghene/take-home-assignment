@@ -1,4 +1,4 @@
-const greatestOfNumbers = (num1, num2, num3) => {
+const greatestOfThreeNumbers = (num1, num2, num3) => {
     if (num1 > num2) {
         if (num1 > num3) 
             console.log(num1, "is greater than", num2, "and", num3);
@@ -31,6 +31,7 @@ const largestOfThreeNumbers = (function(num1, num2, num3) {
     else {
         console.log("The three numbers are equal");
     }
-})(13,45,23)
-greatestOfNumbers(10,23,45);
+})(13,45,23);
+
+greatestOfThreeNumbers(10,23,45);
 largestOfThreeNumbers;
