@@ -24,7 +24,7 @@ const Book = function(title, author, published, hasMovie) {
 }
 
 let book1 = new Book("Last Don", "Mario Puzzo", 1990, true);
-console.log(book1.display());
+book1.display();
 
 const book2 = {
     title: "The Adventures of Sherlock Holmes",
@@ -35,7 +35,7 @@ const book2 = {
         console.log(this);
     }
 };
-console.log(book2.display());
+book2.display();
 
 const book3 = new Object(); 
 book3.title = "A Study in Scarlet";
@@ -47,6 +47,24 @@ book3.display = function() {
 };
 book3.display();
 
+const Movie = function(title, producer, hasBook) {
+    this.title = title;
+    this.producer = producer;
+    this.hasBook = hasBook;
+    this.display = function() {
+        console.log(this);
+    };
+}
+
+let movie1 = new Book("Harry Potter", "JK Rowling", true);
+let movie2 = movie1;
+
+if (movie1 === movie2) {
+    console.log("movie1 is equal to movie2");
+}
+else {
+    console.log("movie1 is not equal to movie2");
+}
 
 
 
