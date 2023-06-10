@@ -66,6 +66,24 @@ else {
     console.log("movie1 is not equal to movie2");
 }
 
+class Employee {
+    constructor(name, age, gender) {
+        this.name   = name;
+        this.age    = age;
+        this.gender = gender;
+    }
+}
+
+let employee1 = new Employee("Ogaga", 44, "Male");
+let employee2 = new Employee("Runor", 12, "Female");
+
+if (employee2 === employee1) {
+    console.log("employee1 is same as employee2");
+} 
+else {
+    console.log("employee1 is not same as employee2");
+}
+
 
 
 
